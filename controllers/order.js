@@ -149,3 +149,31 @@ export const updateOrderStatus = async (req, res) => {
       res.status(500).json({ error: 'An error occurred while updating the order status.' });
     }
   };
+
+  export const deleteOrder = async (req, res) => {
+    const { orderId } = req.body;
+  
+    // Validation: Ensure orderId is provided
+    if (!orderId) {
+      return res.status(400).json({ error: "Order ID is required." });
+    }
+  
+    try {
+      // Find and delete the order by its ID
+      const deletedOrder = await Order.findByIdAndDelete(orderId);
+  
+      // If the order is not found
+      if (!deletedOrder) {
+        return res.status(404).json({ message: "Order not found." });
+      }
+  
+      // Return success response
+      res.status(200).json({
+        message: "Order deleted successfully",
+        deletedOrder,
+      });
+    } catch (error) {
+      console.error("Error deleting order:", error);
+      res.status(500).json({ error: "An error occurred while deleting the order." });
+    }
+  };
