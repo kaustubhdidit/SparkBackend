@@ -11,6 +11,9 @@ The backend is deployed on a free-tier Render service, which automatically spins
 ## ⚡️ Live Link  
 - [Deployment Link](https://sparkathon.vercel.app)
 
+## Frontend Repo
+- [Frontend Repo Link](https://github.com/kaustubhdidit/sparkathon)
+
 ---
 
 ## Setup Instructions  
