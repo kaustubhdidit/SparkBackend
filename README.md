@@ -5,6 +5,12 @@ A Node.js backend application designed for the Sparkathon Inventory Management s
 ## 📹 Video Walkthrough  
 - [Watch the walkthrough video here](https://youtu.be/tM-yvjeXqWQ)
 
+## Important Note:
+The backend is deployed on a free-tier Render service, which automatically spins down when inactive. Please allow up to 1 minute for the backend to start when accessing the application.
+
+## ⚡️ Live Link  
+- [Deployment Link](https://sparkathon.vercel.app)
+
 ---
 
 ## Setup Instructions  
